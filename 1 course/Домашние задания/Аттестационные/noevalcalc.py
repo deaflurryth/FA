@@ -38,7 +38,7 @@ def main():
     elif 'del' in holder:                            #удаление результата
         mdel= input('Enter the name of the result to be deleted:  ')
         if str(mdel) in temp:
-            for www in Outputs:
+            for www in temo:
                 print(f'result {www} successfully deleted')
                 del cache[www]
             print('delete success')
