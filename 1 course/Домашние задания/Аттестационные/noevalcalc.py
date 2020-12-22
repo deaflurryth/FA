@@ -27,7 +27,7 @@ mathconsta= {
 cache= {} #Результаты вычислений
 output= 0
 temp= []
-eznumbconsta= [ 2,      3,       5,     7,      11,     13,     17,     19,     23,     29,     31,     37,
+eznumbconsta= [         2,      3,       5,     7,      11,     13,     17,     19,     23,     29,     31,     37,
                         41,     43,	    47,	    53,	    59,	    61,	    67,	    71,	    73,	    79,	    83,	    89,
                         97,     101,    103,    107,    109,    113,    127,    131,    137,    139,    149,    151,
                         157,	163,	167,	173,	179,	181,	191,	193,    197,	199,	211,	223,
@@ -56,10 +56,12 @@ def main():
             main()
         elif 'del' in holder:                            #удаление результата
             mdel= input('Enter the name of the result to be deleted:  ')
-            if str(mdel) in temp:
-                for www in temp:
+            if str(mdel) in cache:
+                for www in cache:
                     print(f'result {www} successfully deleted')
                     del cache[www]
+                    #cache.pop(www)
+                    print(cache)
                 print('delete success')
                 print(cache)
             else:
@@ -210,5 +212,4 @@ def main():
             except Exception as ex:
                 main()                                        #добавляем исключение, в котором мы возрващаемся к началу
 main()
-
 
